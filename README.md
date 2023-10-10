@@ -28,6 +28,11 @@ python3 PUQKD_bias_XOR_test.py
 ```
 Both algorithms have shown to only achive accuracies bound by the bias of the PUF.
 
+Additionally, you may run the the evaluation script which can be used to run further operations on the bit strings generated in the system and evaluate their bias:
+```
+python3 PUQKD_evaluation_test.py
+```
+
 ## References
 
 1. N. Wisiol, C. Gräbnitz, C. Mühl, B. Zengin, T. Soroceanu, N. Pirnay, K. T. Mursi, and A. Baliuka, "pypuf: Cryptanalysis of Physically Unclonable Functions," 2021, version v2. [Online]. Available: https://doi.org/10.5281/zenodo.3901410
