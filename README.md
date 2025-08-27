@@ -6,9 +6,9 @@ Two algorithms using Multi-Layer Perceptron (MLP) to attack integrated XOR PUFs 
  - Random guessing of data bits to decode PUF responses
  - Random guessing of PUF responses based on its bias
 
-## Hot to cite
+## How to cite
 
-M. Ferens, "PU-QKD: Authentication in Quantum Key Distribution with Classical Physical Unclonable Functions," 2024, *unpublished*.
+M. Ferens, "PU-QKD: Authentication in Quantum Key Distribution with Classical Physical Unclonable Functions," *IEEE Global Communications Conference (GLOBECOM) 2025*.
 
 ## Dependencies
 
