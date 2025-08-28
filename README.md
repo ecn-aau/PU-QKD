@@ -1,14 +1,14 @@
 # PU-QKD
 
-Code to run Machine Learning (ML) modeling attacks on PUFs integrated in a PU-QKD system.
+The Physically Unclonable Quantum Key Distribution (PU-QKD) attempts to leverage hardware-bound unique identifiers via PUFs to provide authentication to QKD protocols.
+Additionally, performance is enhanced through the replacement of post-processing steps with encoding of the data bits string.
 
+This repository includes two scripts for theoretically and experimentally (simulation) evaluating the performance in terms of "usable bits", i.e., bits that can be used as key material, of traditional QKD and PU-QKD.
+
+Additionally, code to run Machine Learning (ML) modeling attacks on PUFs integrated in a PU-QKD system are included.
 Two algorithms using Multi-Layer Perceptron (MLP) to attack integrated XOR PUFs in PU-QKD have been implemented:
  - Random guessing of data bits to decode PUF responses
  - Random guessing of PUF responses based on its bias
-
-## How to cite
-
-M. Ferens, "PU-QKD: Authentication in Quantum Key Distribution with Classical Physical Unclonable Functions," *IEEE Global Communications Conference (GLOBECOM) 2025*.
 
 ## Dependencies
 
@@ -21,7 +21,18 @@ The code was tested using the following:
 
 ## How to use
 
-To run single experiments use on of the following (use `--help` for a list of arguments):
+### Performance evaluation
+
+To test the performance of QKD or PU-QKD use one of the following (use `--help` for a list of arguments):
+```
+python3 QKD_sim.py
+Python3 QKD_theoretical.py
+```
+You should use the input arguments to configure the system towards QKD or PU-QKD. Specifically, in `QKD_sim.py` you should set `--drop-check=0` and `--hashed-key=0` for PU-QKD, and viceversa for QKD. On the other hand, in `QKD_theoretical` you simply set the post-processing parameters to the desired values.
+
+### Security evaluation
+
+To run single experiments for modeling attempts on PU-QKD use one of the following (use `--help` for a list of arguments):
 ```
 python3 PUQKD_random_XOR_test.py
 python3 PUQKD_bias_XOR_test.py
@@ -32,6 +43,10 @@ Additionally, you may run the the evaluation script which can be used to run fur
 ```
 python3 PUQKD_evaluation_test.py
 ```
+
+## How to cite
+
+M. Ferens, "PU-QKD: Authentication in Quantum Key Distribution with Classical Physical Unclonable Functions," *IEEE Global Communications Conference (GLOBECOM) 2025*.
 
 ## References
 
